@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\spr_title</sprite>
     <sprite>sprites\sprite0</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\sprite2</sprite>
@@ -13,18 +14,22 @@
     <sprite>sprites\spr_level_system</sprite>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_health_bar</sprite>
-    <sprite>sprites\spr_button</sprite>
+    <sprites name="Buttons">
+      <sprite>sprites\spr_button</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_cave</background>
     <background>background\brg_wood</background>
     <background>background\brg_sky</background>
+    <background>background\Cave_Background_1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_move.gml</script>
     <script>scripts\scr_exit_game.gml</script>
     <script>scripts\scr_start_game.gml</script>
+    <script>scripts\scr_back_button.gml</script>
     <script>scripts\scr_settings_game.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -40,10 +45,14 @@
     <object>objects\obj_data</object>
     <object>objects\obj_player</object>
     <object>objects\obj_game_version</object>
-    <object>objects\obj_button_parent</object>
-    <object>objects\obj_start_button</object>
-    <object>objects\obj_settings_button</object>
-    <object>objects\obj_exit_button</object>
+    <objects name="Buttons">
+      <object>objects\obj_button_parent</object>
+      <object>objects\obj_settings_button</object>
+      <object>objects\obj_exit_button</object>
+      <object>objects\obj_start_button</object>
+      <object>objects\obj_back_button</object>
+    </objects>
+    <object>objects\obj_title</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
