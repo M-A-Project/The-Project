@@ -11,6 +11,9 @@
     <sprite>sprites\sprite2</sprite>
     <sprite>sprites\spr_room</sprite>
     <sprite>sprites\spr_level_system</sprite>
+    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_health_bar</sprite>
+    <sprite>sprites\spr_button</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_cave</background>
@@ -18,6 +21,15 @@
     <background>background\brg_sky</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_move.gml</script>
+    <script>scripts\scr_exit_game.gml</script>
+    <script>scripts\scr_start_game.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_one</font>
+    <font>fonts\font1</font>
+  </fonts>
   <objects name="objects">
     <object>objects\object0</object>
     <object>objects\object2</object>
@@ -25,9 +37,14 @@
     <object>objects\obj_room</object>
     <object>objects\obj_level_system</object>
     <object>objects\obj_data</object>
+    <object>objects\obj_player</object>
+    <object>objects\obj_button_parent</object>
+    <object>objects\obj_start_button</object>
+    <object>objects\obj_exit_button</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_game</room>
   </rooms>
   <constants number="5">
     <constant name="CELL_WIDTH">32</constant>
