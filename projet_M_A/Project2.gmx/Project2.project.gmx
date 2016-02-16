@@ -25,6 +25,7 @@
     <script>scripts\scr_move.gml</script>
     <script>scripts\scr_exit_game.gml</script>
     <script>scripts\scr_start_game.gml</script>
+    <script>scripts\scr_settings_game.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_one</font>
@@ -38,14 +39,16 @@
     <object>objects\obj_level_system</object>
     <object>objects\obj_data</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_game_version</object>
     <object>objects\obj_button_parent</object>
     <object>objects\obj_start_button</object>
+    <object>objects\obj_settings_button</object>
     <object>objects\obj_exit_button</object>
-    <object>objects\obj_game_version</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <room>rooms\rm_game</room>
+    <room>rooms\rm_settings</room>
   </rooms>
   <constants number="6">
     <constant name="CELL_WIDTH">32</constant>
