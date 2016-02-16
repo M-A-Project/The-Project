@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initialize the exit button
-button_text = 'Exit';
-button_action = scr_exit_game;
+            <string>/// Initializes the button
+button_text = 'Controls';
+button_action = scr_controls_button;
 </string>
           </argument>
         </arguments>

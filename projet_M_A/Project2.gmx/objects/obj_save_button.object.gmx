@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_button_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,41 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initialize the button
-button_text = "";
-button_action = scr_exit_game;
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Change the sprites when mouse hover
-/*if (postition_meeting(mouse_x, mouse_y, self)) {
-    image_index = 1;
-    hover = true;
-} else {
-    image_index = 0;
-    hover = false;
-}
-*/
+            <string>/// Initialize the start button
+button_text = 'Save';
 </string>
           </argument>
         </arguments>
@@ -82,37 +49,29 @@ button_action = scr_exit_game;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Call the button action
-script_execute(button_action);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Draw the button and the text
-draw_self();
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-draw_text(x, y, button_text);
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
+            <string>/// Save the the stuff set
+if (room == rm_controls) {
+    ini_open("Settings.ini");
+    
+    global.key_up = obj_key_up.key;
+    global.key_down = obj_key_down.key;
+    global.key_left = obj_key_left.key;
+    global.key_right = obj_key_right.key;
+    
+    ini_write_real("controls", "up", global.key_up);
+    ini_write_real("controls", "down", global.key_down);
+    ini_write_real("controls", "left", global.key_left);
+    ini_write_real("controls", "right", global.key_right);
+    ini_close();
+    room_goto(rm_controls);
+    
+    
+} /*else if {
+    else if (room == rm_sound) {
+    
+    }
+}
+*/
 </string>
           </argument>
         </arguments>
