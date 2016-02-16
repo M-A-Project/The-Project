@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initialize the start button
+            <string>/// Initialize the save button
 button_text = 'Save';
 </string>
           </argument>
@@ -63,15 +63,22 @@ if (room == rm_controls) {
     ini_write_real("controls", "left", global.key_left);
     ini_write_real("controls", "right", global.key_right);
     ini_close();
-    room_goto(rm_controls);
+    room_goto(rm_settings);
     
     
-} /*else if {
-    else if (room == rm_sound) {
+} else if (room == rm_sound) {
+    ini_open("Settings.ini");
     
-    }
+    global.ambientSound = obj_hslider_ambient.percentage;
+    global.effectSound = obj_hslider_effect.percentage;
+    global.musicSound = obj_hslider_music.percentage;
+    
+    ini_write_real("sound", "ambient", global.ambientSound);
+    ini_write_real("sound", "effect", global.effectSound);
+    ini_write_real("sound", "music",  global.musicSound);
+    ini_close();
+    room_goto(rm_settings);
 }
-*/
 </string>
           </argument>
         </arguments>
