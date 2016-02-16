@@ -28,7 +28,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_one</font>
-    <font>fonts\font1</font>
+    <font>fonts\fnt_two</font>
   </fonts>
   <objects name="objects">
     <object>objects\object0</object>
@@ -41,17 +41,19 @@
     <object>objects\obj_button_parent</object>
     <object>objects\obj_start_button</object>
     <object>objects\obj_exit_button</object>
+    <object>objects\obj_game_version</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <room>rooms\rm_game</room>
   </rooms>
-  <constants number="5">
+  <constants number="6">
     <constant name="CELL_WIDTH">32</constant>
     <constant name="CELL_HEIGHT">32</constant>
     <constant name="FLOOR">-5</constant>
     <constant name="WALL">-6</constant>
     <constant name="VOID">-7</constant>
+    <constant name="Game_Version">'1.0.0'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
