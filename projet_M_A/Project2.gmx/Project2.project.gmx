@@ -9,10 +9,6 @@
     <sprite>sprites\spr_keyController</sprite>
     <sprite>sprites\spr_key</sprite>
     <sprite>sprites\spr_title</sprite>
-    <sprite>sprites\sprite0</sprite>
-    <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\sprite2</sprite>
-    <sprite>sprites\spr_room</sprite>
     <sprite>sprites\spr_level_system</sprite>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_health_bar</sprite>
@@ -24,9 +20,6 @@
   </sprites>
   <backgrounds name="background">
     <background>background\brg_cave</background>
-    <background>background\brg_wood</background>
-    <background>background\brg_sky</background>
-    <background>background\Cave_Background_1</background>
     <background>background\brg_menu</background>
   </backgrounds>
   <paths name="paths"/>
@@ -45,14 +38,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_title</object>
-    <object>objects\object0</object>
-    <object>objects\object2</object>
-    <object>objects\ob_wall</object>
-    <object>objects\obj_room</object>
-    <object>objects\obj_level_system</object>
-    <object>objects\obj_data</object>
     <object>objects\obj_player</object>
-    <object>objects\obj_game_version</object>
     <objects name="Buttons">
       <objects name="Keys">
         <object>objects\obj_key_up</object>
@@ -80,6 +66,10 @@
       <object>objects\obj_hbar_effect</object>
       <object>objects\obj_hslider_music</object>
       <object>objects\obj_hbar_music</object>
+    </objects>
+    <objects name="Data">
+      <object>objects\obj_data</object>
+      <object>objects\obj_game_version</object>
     </objects>
   </objects>
   <rooms name="rooms">
