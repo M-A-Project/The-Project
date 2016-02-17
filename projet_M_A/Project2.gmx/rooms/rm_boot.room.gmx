@@ -18,6 +18,7 @@ global.key_up = ini_read_real("controls", "up", keyboard_get_map("W"));
 global.key_down = ini_read_real("controls", "down", keyboard_get_map("S"));
 global.key_left = ini_read_real("controls", "left", keyboard_get_map("A"));
 global.key_right = ini_read_real("controls", "right", keyboard_get_map("D"));
+global.key_jump = ini_read_real("controls", "jump", keyboard_get_map("Spc"));
 ini_close();
 
 room_goto(rm_menu);</code>

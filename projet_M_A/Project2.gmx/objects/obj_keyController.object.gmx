@@ -69,6 +69,10 @@ if (newKey != vk_escape) {
         case "right":
             obj_key_right.key = newKey;
         break;
+        
+        case "jump":
+            obj_key_jump.key = newKey;
+        break;
     }
 }
 instance_destroy();
