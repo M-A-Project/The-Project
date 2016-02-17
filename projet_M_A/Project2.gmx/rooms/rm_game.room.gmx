@@ -56,7 +56,7 @@
     <instance objName="obj_cave_ground" x="0" y="928" name="inst_CF6BC527" locked="0" code="" scaleX="240" scaleY="24" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
-  <PhysicsWorld>-1</PhysicsWorld>
+  <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
   <PhysicsWorldLeft>0</PhysicsWorldLeft>
   <PhysicsWorldRight>1024</PhysicsWorldRight>
