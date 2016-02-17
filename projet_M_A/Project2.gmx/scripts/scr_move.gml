@@ -3,11 +3,11 @@ hspd = 20;
 vspd = 20;
 
 if (keyboard_check(global.key_up)) {
-    y -= 4;
+    y -= vspd;
 }
 
 if (keyboard_check(global.key_down)) {
-    y += 4;
+    y += vspd;
 }
 
 if (keyboard_check(global.key_left)) {
