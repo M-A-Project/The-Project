@@ -57,6 +57,7 @@
     <instance objName="obj_key_left" x="736" y="544" name="inst_2D4F60A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_key_right" x="1120" y="544" name="inst_58440EE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_save_button" x="1632" y="992" name="inst_E2645EA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_key_jump" x="928" y="736" name="inst_8D45A89D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

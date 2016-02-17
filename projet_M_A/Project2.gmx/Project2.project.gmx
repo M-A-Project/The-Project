@@ -8,8 +8,8 @@
   <sprites name="sprites">
     <sprite>sprites\spr_keyController</sprite>
     <sprite>sprites\spr_key</sprite>
+    <sprite>sprites\spr_key2</sprite>
     <sprite>sprites\spr_title</sprite>
-    <sprite>sprites\spr_level_system</sprite>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_health_bar</sprite>
     <sprites name="Buttons">
@@ -42,6 +42,7 @@
     <font>fonts\fnt_two</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_esc_game</object>
     <object>objects\obj_title</object>
     <object>objects\obj_player</object>
     <objects name="Buttons">
@@ -50,6 +51,7 @@
         <object>objects\obj_key_down</object>
         <object>objects\obj_key_left</object>
         <object>objects\obj_key_right</object>
+        <object>objects\obj_key_jump</object>
         <object>objects\obj_keyController</object>
       </objects>
       <object>objects\obj_button_parent</object>
@@ -96,7 +98,7 @@
     <constant name="FLOOR">-5</constant>
     <constant name="WALL">-6</constant>
     <constant name="VOID">-7</constant>
-    <constant name="Game_Version">'1.0.2'</constant>
+    <constant name="Game_Version">'1.0.3'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

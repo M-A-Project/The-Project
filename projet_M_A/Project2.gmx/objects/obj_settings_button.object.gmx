@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initialize the start button
+            <string>/// Initialize the settings button
 button_text = 'Settings';
 button_action = scr_settings_game;
 </string>
