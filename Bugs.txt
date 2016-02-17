@@ -1,0 +1,6 @@
+Known Bugs
+----------
+
+Movement
+--------
+* When you jump onto an edge you can get get "stuck" with a 1/4 of the character.
