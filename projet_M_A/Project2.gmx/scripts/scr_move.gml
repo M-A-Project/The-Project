@@ -34,7 +34,7 @@ if (place_meeting(x, y + 1, obj_cave_ground)) {
     jump = jumpmax;
     vspd = kJump * -jumpspeed;
 } else {
-    if (jump == jumpmax) jump -= 1;
+    if (jump == jumpmax) jump -= 5;
 }
 
 // Double jump
