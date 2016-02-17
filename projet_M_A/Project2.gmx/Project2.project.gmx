@@ -55,6 +55,7 @@
     <font>fonts\fnt_two</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_minimap</object>
     <object>objects\obj_esc_game</object>
     <object>objects\obj_title</object>
     <object>objects\obj_player</object>
