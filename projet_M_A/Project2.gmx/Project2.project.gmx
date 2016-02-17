@@ -6,23 +6,31 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_keyController</sprite>
-    <sprite>sprites\spr_key</sprite>
-    <sprite>sprites\spr_key2</sprite>
+    <sprite>sprites\spr_hslider</sprite>
+    <sprite>sprites\spr_hbar</sprite>
     <sprite>sprites\spr_title</sprite>
-    <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_health_bar</sprite>
     <sprites name="Buttons">
       <sprite>sprites\spr_button</sprite>
+      <sprite>sprites\spr_keyController</sprite>
+      <sprites name="Keys">
+        <sprite>sprites\spr_key</sprite>
+        <sprite>sprites\spr_key2</sprite>
+      </sprites>
     </sprites>
-    <sprite>sprites\spr_hbar</sprite>
-    <sprite>sprites\spr_hslider</sprite>
     <sprites name="Tiles">
       <sprites name="Cave">
         <sprite>sprites\spr_cave_ground</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_level_one</sprite>
+    <sprites name="Levels">
+      <sprite>sprites\spr_level_one</sprite>
+    </sprites>
+    <sprites name="Player">
+      <sprite>sprites\spr_player</sprite>
+      <sprites name="Data">
+        <sprite>sprites\spr_health_bar</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_cave</background>
