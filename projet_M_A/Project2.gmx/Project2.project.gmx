@@ -100,16 +100,19 @@
     <objects name="Levels">
       <object>objects\obj_level_1</object>
     </objects>
+    <object>objects\obj_boss_1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_boot</room>
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_game</room>
     <room>rooms\rm_settings</room>
     <room>rooms\rm_controls</room>
     <room>rooms\rm_sound</room>
     <room>rooms\rm_levels</room>
     <room>rooms\rm_character</room>
+    <rooms name="Levels">
+      <room>rooms\rm_level_1</room>
+    </rooms>
   </rooms>
   <constants number="6">
     <constant name="CELL_WIDTH">32</constant>
