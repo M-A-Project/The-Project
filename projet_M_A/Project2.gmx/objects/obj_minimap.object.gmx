@@ -85,7 +85,7 @@ for (k = 0; k &lt; wallCount; k = k + 1) {
     wallId = instance_find(obj_cave_ground, k);
     var whereX = xp + wallId.x * (xScale);
     var whereY = yp + wallId.y * (yScale);
-    draw_circle(whereX, whereY, 2, false);
+    draw_rectangle(whereX + 6, whereY + 9, whereX + 5, whereY + 5, false);
 }
 
 // Solid outer border drawn last so it is on top

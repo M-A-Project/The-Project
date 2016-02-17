@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initialize the player
+            <string>/// Initialize variables
 hp = 50;
 draw_set_font(fnt_one);
 
@@ -42,12 +42,12 @@ jump = 0;
 jumpmax = 10;
 
 // Minimap values
-xp = 250
-yp = 280
-height = 100
-width = 100
-xscale = width / room_width // How much to shrink
-yscale = height / room_height // How much to shrink
+xp = 850
+yp = 20
+height = 200
+width = 200
+xScale = width / room_width // How much to shrink
+yScale = height / room_height // How much to shrink
 </string>
           </argument>
         </arguments>
@@ -97,6 +97,60 @@ scr_move();
             <string>/// Draw the health
 draw_text(32,32,string(hp));
 draw_sprite(spr_health_bar, 0, 32, 128);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw the minimap
+
+// Half faded black background now, border later
+draw_set_alpha(0.3);
+draw_rectangle(xp, yp, xp + width, yp + height, false);
+
+//draw boss on minimap
+draw_set_color(c_yellow);
+draw_set_alpha(.80);
+var bossCount;
+bossCount = instance_number(obj_player);
+for (k = 0; k &lt; bossCount; k = k + 1) {
+    bossId = instance_find(obj_player, k);
+    var whereX = xp + bossId.x * (xScale);
+    var whereY = yp + bossId.y * (yScale);
+    draw_circle(whereX, whereY, 2, false);
+}
+
+// Draw all wall units
+// warning! can be inefficient - using surfaces or pre-made sprite
+// is better for room maps!
+draw_set_color(c_gray);
+draw_set_alpha(.80);
+var wallCount;
+wallCount = instance_number(obj_cave_ground);
+for (k = 0; k &lt; wallCount; k = k + 1) {
+    wallId = instance_find(obj_cave_ground, k);
+    var whereX = xp + wallId.x * (xScale);
+    var whereY = yp + wallId.y * (yScale);
+    draw_rectangle(whereX + 6, whereY + 9, whereX + 5, whereY + 5, false);
+}
+
+// Solid outer border drawn last so it is on top
+draw_set_color(c_black);
 </string>
           </argument>
         </arguments>
