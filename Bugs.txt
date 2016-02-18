@@ -4,3 +4,4 @@ Known Bugs
 Movement
 --------
 * When you jump onto an edge you can get get "stuck" with a 1/4 of the character.
+* When you go left, the character sprite stay the same as the right.
