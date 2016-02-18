@@ -36,9 +36,8 @@ jumpspeed = 7;
 movespeed = 6;
 jump = 0;
 jumpmax = 10;
-
-alarm[0] = 180;
 dir = -1;
+step_counter = 180;
 </string>
           </argument>
         </arguments>
@@ -62,7 +61,7 @@ dir = -1;
           <argument>
             <kind>1</kind>
             <string>/// Engage boss
-if (distance_to_object(obj_player) &lt; 20) { //If the player came in close enough
+if (distance_to_object(obj_player) &lt; 50) { //If the player came in close enough
     engaged = 1
 }  
 
@@ -75,9 +74,23 @@ if (place_free(x, y + 1)) { //If there's no ground underneath the boss
 vspd += grav;
 
 // React to player
-if (engaged == 1) {
-    //hspd = 1;
+/*if (engaged == 1) {
     hspd = dir * movespeed;
+    step_counter--;
+}
+*/
+
+if (step_counter &amp;&amp; engaged == 1) &gt; 0 {
+    hspd = dir * movespeed;
+    step_counter--;
+} else if (step_counter) ==0 {
+    hspd = 0;
+    engaged = 0;
+}
+
+if (!step_counter &amp;&amp; !engaged &amp;&amp; !hspd) &gt; 0 {
+    step_counter = 180;
+    engaged = 0;
 }
 
 // Change sprites

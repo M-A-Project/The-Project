@@ -41,6 +41,8 @@
     <background>background\brg_cave</background>
     <background>background\brg_menu_text</background>
     <background>background\brg_menu_picture</background>
+    <background>background\brg_forest</background>
+    <background>background\brg_levels</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -54,6 +56,7 @@
     <script>scripts\scr_game_level_1.gml</script>
     <script>scripts\scr_levels.gml</script>
     <script>scripts\scr_character.gml</script>
+    <script>scripts\scr_joystick_support.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_one</font>
@@ -112,7 +115,6 @@
       </objects>
     </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_boot</room>
     <room>rooms\rm_menu</room>

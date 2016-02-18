@@ -72,6 +72,7 @@ yScale = height / room_height // How much to shrink
             <kind>1</kind>
             <string>/// Control the player
 scr_move();
+scr_joystick_support();
 </string>
           </argument>
         </arguments>
@@ -123,7 +124,7 @@ draw_sprite(spr_health_bar, 0, 32, 128);
 draw_set_alpha(0.3);
 draw_rectangle(xp, yp, xp + width, yp + height, false);
 
-//draw player on minimap
+//draw player on the minimap
 draw_set_color(c_yellow);
 draw_set_alpha(.80);
 var playerCount;
@@ -151,7 +152,7 @@ for (k = 0; k &lt; wallCount; k = k + 1) {
     draw_rectangle(whereX + 6, whereY + 9, whereX + 5, whereY + 5, false);
 }
 
-//draw player on minimap
+//draw boss_1 on the minimap
 draw_set_color(c_red);
 draw_set_alpha(.80);
 var bossCount;
@@ -160,7 +161,7 @@ for (k = 0; k &lt; bossCount; k = k + 1) {
     bossId_1 = instance_find(obj_boss_1, k);
     var whereX = xp + bossId_1.x * (xScale);
     var whereY = yp + bossId_1.y * (yScale);
-    draw_circle(whereX, whereY, 2, false);
+    draw_circle(whereX, whereY +- 4, 2, false);
 }
 
 // Solid outer border drawn last so it is on top

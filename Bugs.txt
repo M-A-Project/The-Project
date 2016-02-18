@@ -6,3 +6,4 @@ Movement
 * When you jump onto an edge you can get get "stuck" with a 1/4 of the character.
 * When you go left, the character sprite stay the same as the right.
 * It is possible to get stuck in the rabbit (boss_1).
+* Get stuck in walls happends now and then.
