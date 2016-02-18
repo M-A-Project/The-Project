@@ -72,8 +72,10 @@ if (place_free(x, y + 1)) { //If there's no ground underneath the boss
 
 // React to player
 if (engaged == 1) {
-    x += movespeed;
+    hspd = 0;
 }
+
+if (vspd &lt; 10) vspd += grav;
 
 // Horizontal Collision
 if (place_meeting(x + hspd, y, obj_cave_ground)) {
