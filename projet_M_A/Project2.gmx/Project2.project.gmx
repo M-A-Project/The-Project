@@ -21,9 +21,13 @@
       <sprites name="Cave">
         <sprite>sprites\spr_cave_ground</sprite>
       </sprites>
+      <sprites name="Forest">
+        <sprite>sprites\spr_forest_ground</sprite>
+      </sprites>
     </sprites>
     <sprites name="Levels">
       <sprite>sprites\spr_level_one</sprite>
+      <sprite>sprites\spr_level_two</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_player</sprite>
@@ -54,6 +58,7 @@
     <script>scripts\scr_controls_button.gml</script>
     <script>scripts\scr_sound_button.gml</script>
     <script>scripts\scr_game_level_1.gml</script>
+    <script>scripts\scr_game_level_2.gml</script>
     <script>scripts\scr_levels.gml</script>
     <script>scripts\scr_character.gml</script>
     <script>scripts\scr_joystick_support.gml</script>
@@ -61,6 +66,7 @@
   <fonts name="fonts">
     <font>fonts\fnt_one</font>
     <font>fonts\fnt_two</font>
+    <font>fonts\fnt_damage</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_esc_game</object>
@@ -105,20 +111,26 @@
       <objects name="Cave">
         <object>objects\obj_cave_ground</object>
       </objects>
+      <objects name="Forest">
+        <object>objects\obj_forest_ground</object>
+      </objects>
     </objects>
     <objects name="Levels">
       <object>objects\obj_level_1</object>
+      <object>objects\obj_level_2</object>
     </objects>
     <objects name="Boss">
       <objects name="Boss_1">
         <object>objects\obj_boss_1</object>
       </objects>
     </objects>
+    <object>objects\obj_damage</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_boot</room>
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_game</room>
+    <room>rooms\rm_level_1</room>
+    <room>rooms\rm_level_2</room>
     <room>rooms\rm_settings</room>
     <room>rooms\rm_controls</room>
     <room>rooms\rm_sound</room>
