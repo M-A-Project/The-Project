@@ -28,7 +28,7 @@ kJumpHeld = keyboard_check(global.key_jump);
 
 if (keyboard_check(global.key_right)) {
     sprite_index = spr_player_walk_right;
-    image_speed = .15;
+    image_speed = .30;
 } else if (!kRight and !kLeft and !kJumpHeld and !kJump) {
     image_speed = 0;
     image_index = 0;
@@ -36,7 +36,7 @@ if (keyboard_check(global.key_right)) {
 
 if (keyboard_check(global.key_left)) {
     sprite_index = spr_player_walk_left;
-    image_speed = .15;
+    image_speed = .30;
 } else if (!kRight and !kLeft and !kJumpHeld and !kJump) {
     image_speed = 0;
     image_index = 0;

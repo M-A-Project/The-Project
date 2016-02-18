@@ -151,6 +151,7 @@
     <instance objName="obj_cave_ground" x="-32" y="800" name="inst_6BD7C034" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cave_ground" x="-32" y="768" name="inst_3B0D8E4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cave_ground" x="-32" y="736" name="inst_CFB34546" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boss_1" x="1376" y="1024" name="inst_A8545EB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

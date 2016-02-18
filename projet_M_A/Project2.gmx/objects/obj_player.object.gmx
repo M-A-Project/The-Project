@@ -123,12 +123,14 @@ draw_sprite(spr_health_bar, 0, 32, 128);
 draw_set_alpha(0.3);
 draw_rectangle(xp, yp, xp + width, yp + height, false);
 
-//draw boss on minimap
+//draw player on minimap
 draw_set_color(c_yellow);
 draw_set_alpha(.80);
-var bossCount;
-bossCount = instance_number(obj_player);
-for (k = 0; k &lt; bossCount; k = k + 1) {
+var playerCount;
+
+// Player
+playerCount = instance_number(obj_player);
+for (k = 0; k &lt; playerCount; k = k + 1) {
     bossId = instance_find(obj_player, k);
     var whereX = xp + bossId.x * (xScale);
     var whereY = yp + bossId.y * (yScale);
@@ -147,6 +149,18 @@ for (k = 0; k &lt; wallCount; k = k + 1) {
     var whereX = xp + wallId.x * (xScale);
     var whereY = yp + wallId.y * (yScale);
     draw_rectangle(whereX + 6, whereY + 9, whereX + 5, whereY + 5, false);
+}
+
+//draw player on minimap
+draw_set_color(c_red);
+draw_set_alpha(.80);
+var bossCount;
+bossCount = instance_number(obj_boss_1);
+for (k = 0; k &lt; bossCount; k = k + 1) {
+    bossId_1 = instance_find(obj_boss_1, k);
+    var whereX = xp + bossId_1.x * (xScale);
+    var whereY = yp + bossId_1.y * (yScale);
+    draw_circle(whereX, whereY, 2, false);
 }
 
 // Solid outer border drawn last so it is on top
