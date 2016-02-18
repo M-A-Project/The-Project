@@ -33,7 +33,9 @@
         <sprite>sprites\spr_health_bar</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_boss_1</sprite>
+    <sprite>sprites\spr_boss_1_walk_left</sprite>
+    <sprite>sprites\spr_boss_1_walk_right</sprite>
+    <sprite>sprites\spr_boss_1_idle</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_cave</background>
@@ -110,6 +112,7 @@
       </objects>
     </objects>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_boot</room>
     <room>rooms\rm_menu</room>
@@ -126,7 +129,7 @@
     <constant name="FLOOR">-5</constant>
     <constant name="WALL">-6</constant>
     <constant name="VOID">-7</constant>
-    <constant name="Game_Version">'1.0.3'</constant>
+    <constant name="Game_Version">'1.0.4'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
