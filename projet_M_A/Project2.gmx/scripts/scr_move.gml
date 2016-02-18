@@ -25,31 +25,34 @@ kJump = keyboard_check_pressed(global.key_jump);
 kJumpHeld = keyboard_check(global.key_jump);
 
 // Sprite animation + idle
-if (kRight) {
-              
+
+if (keyboard_check(global.key_right)) {
     sprite_index = spr_player_walk_right;
     image_speed = .15;
-} 
+} else if (!kRight and !kLeft and !kJumpHeld and !kJump) {
+    image_speed = 0;
+    image_index = 0;
+}
 
-if (kLeft) {
-              
+if (keyboard_check(global.key_left)) {
     sprite_index = spr_player_walk_left;
     image_speed = .15;
-            
-            
-} 
+} else if (!kRight and !kLeft and !kJumpHeld and !kJump) {
+    image_speed = 0;
+    image_index = 0;
+}
 
 if (kJump and kJumpHeld) {
 } 
   
  // Stop animating (IDLE STATE)
  
-if (!kRight and !kLeft and !kJumpHeld and !kJump)
-{
-    image_speed = 0;              
+/*if (!kRight and !kLeft and !kJumpHeld and !kJump) {
+    image_speed = 0;
     image_index = 0;
- 
 }
+*/
+
 
 // React to inputs
 move = kLeft + kRight;

@@ -33,6 +33,7 @@
         <sprite>sprites\spr_health_bar</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_boss_1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_cave</background>
@@ -102,6 +103,11 @@
     </objects>
     <objects name="Levels">
       <object>objects\obj_level_1</object>
+    </objects>
+    <objects name="Boss">
+      <objects name="Boss_1">
+        <object>objects\obj_boss_1</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
