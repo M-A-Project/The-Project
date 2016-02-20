@@ -24,7 +24,7 @@ switch (msgId)
         
         // Check if player already exists
         ini_open("users.ini");
-        var playerExists = ini_read_string("uesrs", playerUsername, "false");
+        var playerExists = ini_read_string("users", playerUsername, "false");
         if (playerExists == "false") {
             // Register a new player
             ini_write_string("user", playerUsername, passwordHash);
