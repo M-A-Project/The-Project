@@ -47,6 +47,9 @@
         <sprite>sprites\spr_boss_2_idle</sprite>
       </sprites>
     </sprites>
+    <sprites name="Cursor">
+      <sprite>sprites\spr_pointer</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_cave</background>
@@ -151,11 +154,13 @@
       <object>objects\obj_message</object>
       <object>objects\obj_controller</object>
     </objects>
+    <objects name="Cursor">
+      <object>objects\obj_pointer</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_boot</room>
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_level_2</room>
     <room>rooms\rm_settings</room>
     <room>rooms\rm_controls</room>
     <room>rooms\rm_sound</room>
@@ -164,6 +169,9 @@
     <rooms name="Level 1">
       <room>rooms\rm_level_1</room>
       <room>rooms\rm_level_1_info</room>
+    </rooms>
+    <rooms name="Level 2">
+      <room>rooms\rm_level_2</room>
     </rooms>
   </rooms>
   <constants number="6">
