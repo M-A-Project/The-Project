@@ -24,13 +24,52 @@ kLeft = -keyboard_check(global.key_left);
 kJump = keyboard_check_pressed(global.key_jump);
 kJumpHeld = keyboard_check(global.key_jump);
 
+// Sprite animation + idle
+
+if (keyboard_check(global.key_right)) {
+    sprite_index = spr_player_walk_right;
+    image_speed = .30;
+} else if (!kRight and !kLeft and !kJumpHeld and !kJump) {
+    image_speed = 0;
+    image_index = 0;
+}
+
+if (keyboard_check(global.key_left)) {
+    sprite_index = spr_player_walk_left;
+    image_speed = .30;
+} else if (!kRight and !kLeft and !kJumpHeld and !kJump) {
+    image_speed = 0;
+    image_index = 0;
+}
+
+if (kJump and kJumpHeld) {
+} 
+  
+ // Stop animating (IDLE STATE)
+ 
+/*if (!kRight and !kLeft and !kJumpHeld and !kJump) {
+    image_speed = 0;
+    image_index = 0;
+}
+*/
+
+
 // React to inputs
 move = kLeft + kRight;
 hspd = move * movespeed;
 if (vspd < 10) vspd += grav;
 
-// Jump
+// ___Jump___
+// Cave ground
 if (place_meeting(x, y + 1, obj_cave_ground)) {
+    jump = jumpmax;
+    vspd = kJump * -jumpspeed;
+} else {
+    if (jump == jumpmax) jump -= 5;
+}
+
+// Forest ground
+if (place_meeting(x, y + 1, obj_forest_ground)) {
     jump = jumpmax;
     vspd = kJump * -jumpspeed;
 } else {
@@ -43,12 +82,14 @@ if (place_meeting(x, y + 1, obj_cave_ground)) {
     vspd = -jumpspeed;
 }*/
 
+
 if (vspd < 0) && (!kJumpHeld) vspd = max(vspd, -jumpspeed / 2);
 
 hspd_carry = 0;
 var hspd_final = hspd + hspd_carry;
 
-// Horizontal Collision
+// ___Horizontal Collision___
+// Cave ground
 if (place_meeting(x + hspd, y, obj_cave_ground)) {
     while (!place_meeting(x + sign(hspd), y, obj_cave_ground)) {
         x += sign(hspd);
@@ -56,9 +97,26 @@ if (place_meeting(x + hspd, y, obj_cave_ground)) {
     hspd = 0;
 }
 
-// Vertical Collision
+// Forest ground
+if (place_meeting(x + hspd, y, obj_forest_ground)) {
+    while (!place_meeting(x + sign(hspd), y, obj_forest_ground)) {
+        x += sign(hspd);
+    }
+    hspd = 0;
+}
+
+// ___Vertical Collision___
+// Cave ground
 if (place_meeting(x, y + vspd, obj_cave_ground)) {
     while (!place_meeting(x, y + sign(vspd), obj_cave_ground)) {
+        y += sign(vspd);
+    }
+    vspd = 0;
+}
+
+// Forest ground
+if (place_meeting(x, y + vspd, obj_forest_ground)) {
+    while (!place_meeting(x, y + sign(vspd), obj_forest_ground)) {
         y += sign(vspd);
     }
     vspd = 0;

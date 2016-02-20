@@ -52,8 +52,9 @@ draw_set_font(fnt_two);
           <argument>
             <kind>1</kind>
             <string>/// Draw the GUI data
+draw_set_font(fnt_two);
 draw_text(170,740,string(build));
-draw_text(5,740,string(build2));
+draw_text(10,740,string(build2));
 </string>
           </argument>
         </arguments>
