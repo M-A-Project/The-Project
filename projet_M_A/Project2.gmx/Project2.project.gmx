@@ -75,7 +75,9 @@
     <script>scripts\scr_game_level_1_start.gml</script>
     <scripts name="Server">
       <script>scripts\scr_handleIncomingPackets.gml</script>
+      <script>scripts\scr_showNotification.gml</script>
     </scripts>
+    <script>scripts\scr_signIn_button.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_one</font>
@@ -94,17 +96,22 @@
         <object>objects\obj_key_jump</object>
         <object>objects\obj_keyController</object>
       </objects>
-      <object>objects\obj_button_parent</object>
-      <object>objects\obj_button_parent_keyController</object>
-      <object>objects\obj_settings_button</object>
-      <object>objects\obj_levels_button</object>
-      <object>objects\obj_character</object>
-      <object>objects\obj_exit_button</object>
-      <object>objects\obj_start_button</object>
       <object>objects\obj_back_button</object>
       <object>objects\obj_controls_button</object>
       <object>objects\obj_sound_button</object>
       <object>objects\obj_save_button</object>
+      <objects name="Menu">
+        <object>objects\obj_start_button</object>
+        <object>objects\obj_character</object>
+        <object>objects\obj_levels_button</object>
+        <object>objects\obj_settings_button</object>
+        <object>objects\obj_exit_button</object>
+      </objects>
+      <objects name="Parents">
+        <object>objects\obj_button_parent</object>
+        <object>objects\obj_button_parent_keyController</object>
+        <object>objects\obj_textbox_parent</object>
+      </objects>
     </objects>
     <objects name="Sliders">
       <object>objects\obj_hslider_parent</object>
@@ -157,6 +164,15 @@
     <objects name="Cursor">
       <object>objects\obj_pointer</object>
     </objects>
+    <objects name="Registration">
+      <object>objects\obj_signIn</object>
+      <object>objects\obj_register</object>
+      <object>objects\obj_textbox_username</object>
+      <object>objects\obj_textbox_password1</object>
+      <object>objects\obj_textbox_password2</object>
+      <object>objects\obj_userSignInField</object>
+      <object>objects\obj_userRegisterField</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_boot</room>
@@ -168,7 +184,7 @@
     <room>rooms\rm_character</room>
     <rooms name="Level 1">
       <room>rooms\rm_level_1</room>
-      <room>rooms\rm_level_1_info</room>
+      <room>rooms\rm_level_1_lobby</room>
     </rooms>
     <rooms name="Level 2">
       <room>rooms\rm_level_2</room>

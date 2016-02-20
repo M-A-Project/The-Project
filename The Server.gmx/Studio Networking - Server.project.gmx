@@ -10,6 +10,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_handleIncomingPackets.gml</script>
+    <script>scripts\scr_showNotification.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_controller</object>

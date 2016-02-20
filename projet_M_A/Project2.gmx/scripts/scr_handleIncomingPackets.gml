@@ -6,4 +6,19 @@ switch(msgId) {
         var time = buffer_read(buffer, buffer_u32);
         latency = current_time - time;
     break;
+    
+    case 2:
+        var response = buffer_read(buffer, buffer_u8);
+        
+        switch(response) {
+            case 0: // Failure
+                scr_showNotification("Registration failed! Username already exists!");
+            break;
+            
+            case 1: // Success
+                room_goto(rm_menu);
+                scr_showNotification("Account Created!")
+            break;
+        }
+    break;
 }

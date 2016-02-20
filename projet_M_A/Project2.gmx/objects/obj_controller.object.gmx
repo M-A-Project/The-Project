@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -89,10 +89,10 @@ network_send_packet(socket, global.buffer, buffer_tell(global.buffer));
             <kind>1</kind>
             <string>var eventType = ds_map_find_value(async_load, "type");
 switch(eventType) {
-    case network_type_data:
-        var buffer = ds_map_find_value(async_load, "buffer");
-        buffer_seek(buffer, buffer_seek_start, 0);
-        scr_handleIncomingPackets(buffer);
+    case network_type_data: // When we receive data from a server
+        var buffer = ds_map_find_value(async_load, "buffer"); // Create a read buffer and store incoming information
+        buffer_seek(buffer, buffer_seek_start, 0); // Seek to the beginning of the newly created read buffer
+        scr_handleIncomingPackets(buffer); // Pass this buffer to our helpful script
     break;
 }
 </string>
