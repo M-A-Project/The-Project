@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initialize the level 1 button
+            <string>/// Initialize the level 1 info button
 button_text = 'Level 1';
 button_action = scr_game_level_1;
 </string>
