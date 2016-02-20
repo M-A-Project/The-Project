@@ -37,9 +37,16 @@
         <sprite>sprites\spr_health_bar</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_boss_1_walk_left</sprite>
-    <sprite>sprites\spr_boss_1_walk_right</sprite>
-    <sprite>sprites\spr_boss_1_idle</sprite>
+    <sprites name="Boss">
+      <sprites name="Boss_1">
+        <sprite>sprites\spr_boss_1_walk_left</sprite>
+        <sprite>sprites\spr_boss_1_walk_right</sprite>
+        <sprite>sprites\spr_boss_1_idle</sprite>
+      </sprites>
+      <sprites name="Boss_2">
+        <sprite>sprites\spr_boss_2_idle</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_cave</background>
@@ -122,6 +129,9 @@
     <objects name="Boss">
       <objects name="Boss_1">
         <object>objects\obj_boss_1</object>
+      </objects>
+      <objects name="Boss_2">
+        <object>objects\obj_boss_2</object>
       </objects>
     </objects>
     <object>objects\obj_damage</object>

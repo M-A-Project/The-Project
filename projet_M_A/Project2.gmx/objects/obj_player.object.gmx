@@ -3,7 +3,7 @@
   <spriteName>spr_player</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -144,6 +144,8 @@ for (k = 0; k &lt; playerCount; k = k + 1) {
 draw_set_color(c_gray);
 draw_set_alpha(.80);
 var wallCount;
+
+// Cave ground
 wallCount = instance_number(obj_cave_ground);
 for (k = 0; k &lt; wallCount; k = k + 1) {
     wallId = instance_find(obj_cave_ground, k);
@@ -152,13 +154,35 @@ for (k = 0; k &lt; wallCount; k = k + 1) {
     draw_rectangle(whereX + 2, whereY + 9, whereX + 5, whereY + 5, false);
 }
 
-//draw boss_1 on the minimap
+// Forest ground
+var wallCount;
+wallCount = instance_number(obj_forest_ground);
+for (k = 0; k &lt; wallCount; k = k + 1) {
+    wallId = instance_find(obj_forest_ground, k);
+    var whereX = xp + wallId.x * (xScale);
+    var whereY = yp + wallId.y * (yScale);
+    draw_rectangle(whereX + 2, whereY + 9, whereX + 5, whereY + 5, false);
+}
+
+// Draw boss_1 on the minimap
 draw_set_color(c_red);
 draw_set_alpha(.80);
 var bossCount;
 bossCount = instance_number(obj_boss_1);
 for (k = 0; k &lt; bossCount; k = k + 1) {
     bossId_1 = instance_find(obj_boss_1, k);
+    var whereX = xp + bossId_1.x * (xScale);
+    var whereY = yp + bossId_1.y * (yScale);
+    draw_circle(whereX, whereY + 4, 2, false);
+}
+
+// Draw boss_2 on the minimap
+draw_set_color(c_red);
+draw_set_alpha(.80);
+var bossCount;
+bossCount = instance_number(obj_boss_2);
+for (k = 0; k &lt; bossCount; k = k + 1) {
+    bossId_1 = instance_find(obj_boss_2, k);
     var whereX = xp + bossId_1.x * (xScale);
     var whereY = yp + bossId_1.y * (yScale);
     draw_circle(whereX, whereY + 4, 2, false);
