@@ -1,0 +1,12 @@
+Levels
+-------
+* 5 Forest maps
+* 5 Cave maps
+* 5 Snow maps
+* 5 Ash/Volcano maps (think morrowind for some of them maybe?)
+* 5 Swamp maps
+* High detailed map background
+
+Enemies
+-------
+* Boar
