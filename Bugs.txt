@@ -4,6 +4,15 @@ Known Bugs
 Movement
 --------
 * When you jump onto an edge you can get get "stuck" with a 1/4 of the character.
-* When you go left, the character sprite stay the same as the right.
-* It is possible to get stuck in the rabbit (boss_1).
-* Get stuck in walls happends now and then.
+* Get stuck in walls happends a lot.
+
+Server
+-------
+* The names in the server side client overlap.
+
+Players
+-------
+* When there are two players or more you control all of them with your own movement.
+* Can't see player names even thought it should do so in the code (something is wrong somewhere in the code).
+* The minimap turns red because of player two (obj_remoteplayer) has a red display name that should appear
+  above the head but don't.

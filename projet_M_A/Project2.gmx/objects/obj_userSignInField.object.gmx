@@ -3,7 +3,7 @@
   <spriteName>spr_button</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-5</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,6 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>/// Creates the window
+button_text = 'Sign in';
+
+if ! (instance_exists(obj_textbox_username)) {
+    var a = instance_create( x, 300, obj_textbox_username);
+}
+
+if ! (instance_exists(obj_textbox_password1)) {
+    var b = instance_create( x, 500, obj_textbox_password1);
+}
 </string>
           </argument>
         </arguments>
@@ -48,7 +57,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*if (obj_textbox_username.txt == "") {
+            <string>if (obj_textbox_username.txt == "") {
     scr_showNotification("Please enter a username!");
     exit;
 }
@@ -58,29 +67,28 @@ if (obj_textbox_password1.txt == "") {
     exit;
 }
 
-if (obj_textbox_password2.txt == "") {
-    scr_showNotification("Please confirm password!");
-    exit;
-}
+// Try log in
+var playerUsername = obj_textbox_username.txt;
+var playerPassword = obj_textbox_password1.txt;
+var playerPasswordHash = sha1_string_unicode(playerPassword);
 
-if (obj_textbox_password1.txt == obj_textbox_password2.txt) {
-    // Try register
-    var playerUsername = obj_textbox_username.txt;
-    var playerPassword = obj_textbox_password1.txt;
-    var playerPasswordHash = sha1_string_unicode(playerPassword);
-    
-    buffer_seek(global.buffer, buffer_seek_start, 0);
-    buffer_write(global.buffer, buffer_u8, 2);
-    buffer_write(global.buffer, buffer_string, playerUsername);
-    buffer_write(global.buffer, buffer_string, playerPasswordHash);
-    network_send_packet(obj_controller.socket, global.buffer, buffer_tell(global.buffer));
+global.name = playerUsername;
+
+buffer_seek(global.buffer, buffer_seek_start, 0);
+buffer_write(global.buffer, buffer_u8, 3);
+buffer_write(global.buffer, buffer_u32, global.playerId);
+buffer_write(global.buffer, buffer_string, playerUsername);
+buffer_write(global.buffer, buffer_string, playerPasswordHash);
+network_send_packet(obj_controller.socket, global.buffer, buffer_tell(global.buffer));
+
+// Code for going to login room if we arn't currently in it
+/*
+if (room == rm_login) {
+
 } else {
-    scr_showNotification("Passwords don't match!");
-    exit;
+    room_goto(rm_login);
 }
 */
-
-exit;
 </string>
           </argument>
         </arguments>

@@ -15,6 +15,7 @@
   <objects name="objects">
     <object>objects\obj_controller</object>
     <object>objects\obj_message</object>
+    <object>objects\obj_player</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_server</room>

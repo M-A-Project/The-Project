@@ -77,7 +77,6 @@ event_inherited();
     selected = true;
     keyboard_string = txt;
     obj_textbox_password1.selected = false;
-    obj_textbox_password2.selected = false;
 }
 </string>
           </argument>

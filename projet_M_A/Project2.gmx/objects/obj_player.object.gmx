@@ -26,6 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize variables
+/*
+playerIdentifier = 0;
+playerInGame = false;
+playerSocket = 0;
+*/
+remotePlayerName = "";
+remotePlayerId = 0;
 hp = 50;
 draw_set_font(fnt_one);
 

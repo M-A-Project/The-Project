@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>/// Initializes the button
 button_text = 'Sign in';
-button_action = scr_signIn_button;
 </string>
           </argument>
         </arguments>
@@ -51,7 +50,7 @@ button_action = scr_signIn_button;
           <argument>
             <kind>1</kind>
             <string>if ! (instance_exists(obj_userSignInField)) {
-    var a = instance_create(room_width/2, room_height/2, obj_userSignInField);
+    var a = instance_create(room_width/2, 800, obj_userSignInField);
 }
 </string>
           </argument>

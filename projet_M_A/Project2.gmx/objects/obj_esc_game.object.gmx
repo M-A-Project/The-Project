@@ -50,6 +50,14 @@
             <kind>1</kind>
             <string>/// scr_esc_game()
 if (keyboard_check(vk_escape)) {
+
+    // Tell the server we're leaving the game room
+    buffer_seek(global.buffer, buffer_seek_start, 0); // Seek to the beginning of the read buffer
+    buffer_write(global.buffer, buffer_u8, 6); // Write a tag to the global write buffer
+    buffer_write(global.buffer, buffer_u32, global.playerId);
+    network_send_packet(obj_controller.socket, global.buffer, buffer_tell(global.buffer));
+    
+    // Leave the room
     room_goto(rm_menu);
 }
 </string>

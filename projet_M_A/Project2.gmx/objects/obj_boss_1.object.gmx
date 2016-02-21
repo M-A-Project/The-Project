@@ -64,7 +64,11 @@ i = '';
           <argument>
             <kind>1</kind>
             <string>/// Engage boss
-if (distance_to_object(obj_player) &lt; 50) { //If the player came in close enough
+if (distance_to_object(obj_localplayer) &lt; 50) { //If the player came in close enough
+    engaged = 1
+} 
+
+if (distance_to_object(obj_remoteplayer) &lt; 50) { //If the player came in close enough
     engaged = 1
 }  
 

@@ -31,6 +31,7 @@
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_player2</sprite>
       <sprite>sprites\spr_player_walk_left</sprite>
       <sprite>sprites\spr_player_walk_right</sprite>
       <sprites name="Data">
@@ -77,7 +78,6 @@
       <script>scripts\scr_handleIncomingPackets.gml</script>
       <script>scripts\scr_showNotification.gml</script>
     </scripts>
-    <script>scripts\scr_signIn_button.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_one</font>
@@ -96,6 +96,7 @@
         <object>objects\obj_key_jump</object>
         <object>objects\obj_keyController</object>
       </objects>
+      <object>objects\obj_logout_button</object>
       <object>objects\obj_back_button</object>
       <object>objects\obj_controls_button</object>
       <object>objects\obj_sound_button</object>
@@ -110,7 +111,6 @@
       <objects name="Parents">
         <object>objects\obj_button_parent</object>
         <object>objects\obj_button_parent_keyController</object>
-        <object>objects\obj_textbox_parent</object>
       </objects>
     </objects>
     <objects name="Sliders">
@@ -154,8 +154,8 @@
     </objects>
     <object>objects\obj_damage</object>
     <objects name="Player">
-      <object>objects\obj_player</object>
-      <object>objects\obj_player_2</object>
+      <object>objects\obj_localplayer</object>
+      <object>objects\obj_remoteplayer</object>
     </objects>
     <objects name="Server">
       <object>objects\obj_message</object>
@@ -165,13 +165,18 @@
       <object>objects\obj_pointer</object>
     </objects>
     <objects name="Registration">
-      <object>objects\obj_signIn</object>
       <object>objects\obj_register</object>
-      <object>objects\obj_textbox_username</object>
       <object>objects\obj_textbox_password1</object>
       <object>objects\obj_textbox_password2</object>
-      <object>objects\obj_userSignInField</object>
-      <object>objects\obj_userRegisterField</object>
+      <objects name="Common">
+        <object>objects\obj_textbox_parent</object>
+        <object>objects\obj_textbox_username</object>
+        <object>objects\obj_userRegisterField</object>
+      </objects>
+      <objects name="Login">
+        <object>objects\obj_signIn</object>
+        <object>objects\obj_userSignInField</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
