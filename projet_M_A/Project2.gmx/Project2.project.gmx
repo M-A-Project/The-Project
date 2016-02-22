@@ -63,7 +63,8 @@
   <scripts name="scripts">
     <script>scripts\scr_move.gml</script>
     <script>scripts\scr_exit_game.gml</script>
-    <script>scripts\scr_start_game.gml</script>
+    <script>scripts\scr_singleplayer_button.gml</script>
+    <script>scripts\scr_multiplayer_button.gml</script>
     <script>scripts\scr_back_button.gml</script>
     <script>scripts\scr_settings_game.gml</script>
     <script>scripts\scr_controls_button.gml</script>
@@ -102,7 +103,8 @@
       <object>objects\obj_sound_button</object>
       <object>objects\obj_save_button</object>
       <objects name="Menu">
-        <object>objects\obj_start_button</object>
+        <object>objects\obj_singleplayer_button</object>
+        <object>objects\obj_multiplayer_button</object>
         <object>objects\obj_character</object>
         <object>objects\obj_levels_button</object>
         <object>objects\obj_settings_button</object>
@@ -180,6 +182,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_login</room>
     <room>rooms\rm_boot</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_settings</room>
@@ -201,7 +204,7 @@
     <constant name="FLOOR">-5</constant>
     <constant name="WALL">-6</constant>
     <constant name="VOID">-7</constant>
-    <constant name="Game_Version">'1.0.4'</constant>
+    <constant name="Game_Version">'1.0.5'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
