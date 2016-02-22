@@ -17,10 +17,13 @@ instance_create(room_width - 500, room_height - 750, obj_localplayer);
 
 
 // Tell the server we're joining a game
+// CRASHES THE GAME IF SERVER IS NOT ONLINE!!!
+/*
 buffer_seek(global.buffer, buffer_seek_start, 0);
 buffer_write(global.buffer, buffer_u8, 6);
 buffer_write(global.buffer, buffer_u32, global.playerId);
-network_send_packet(obj_controller.socket, global.buffer, buffer_tell(global.buffer));</code>
+network_send_packet(obj_controller.socket, global.buffer, buffer_tell(global.buffer));
+*/</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

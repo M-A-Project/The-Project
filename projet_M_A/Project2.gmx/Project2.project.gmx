@@ -69,15 +69,24 @@
     <script>scripts\scr_settings_game.gml</script>
     <script>scripts\scr_controls_button.gml</script>
     <script>scripts\scr_sound_button.gml</script>
-    <script>scripts\scr_game_level_1.gml</script>
-    <script>scripts\scr_game_level_2.gml</script>
     <script>scripts\scr_levels.gml</script>
     <script>scripts\scr_character.gml</script>
     <script>scripts\scr_joystick_support.gml</script>
-    <script>scripts\scr_game_level_1_start.gml</script>
     <scripts name="Server">
       <script>scripts\scr_handleIncomingPackets.gml</script>
       <script>scripts\scr_showNotification.gml</script>
+    </scripts>
+    <scripts name="Level 1">
+      <script>scripts\scr_game_level_1.gml</script>
+      <script>scripts\scr_game_level_1_start.gml</script>
+    </scripts>
+    <scripts name="Level 2">
+      <script>scripts\scr_game_level_2.gml</script>
+      <script>scripts\scr_game_level_2_start.gml</script>
+    </scripts>
+    <scripts name="Level 3">
+      <script>scripts\scr_game_level_3.gml</script>
+      <script>scripts\scr_game_level_3_start.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -144,6 +153,11 @@
       </objects>
       <objects name="Level 2">
         <object>objects\obj_level_2</object>
+        <object>objects\obj_level_2_start</object>
+      </objects>
+      <objects name="Level 3">
+        <object>objects\obj_level_3</object>
+        <object>objects\obj_level_3_start</object>
       </objects>
     </objects>
     <objects name="Boss">
@@ -196,6 +210,11 @@
     </rooms>
     <rooms name="Level 2">
       <room>rooms\rm_level_2</room>
+      <room>rooms\rm_level_2_lobby</room>
+    </rooms>
+    <rooms name="Level 3">
+      <room>rooms\rm_level_3</room>
+      <room>rooms\rm_level_3_lobby</room>
     </rooms>
   </rooms>
   <constants number="6">
