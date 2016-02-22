@@ -15,6 +15,7 @@
 // Create our player in the room
 instance_create(room_width - 500, room_height - 750, obj_localplayer);
 
+
 // Tell the server we're joining a game
 buffer_seek(global.buffer, buffer_seek_start, 0);
 buffer_write(global.buffer, buffer_u8, 6);
