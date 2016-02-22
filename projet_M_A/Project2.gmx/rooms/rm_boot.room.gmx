@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>ini_open("Settings.ini");
+  <code>// THIS ROOM NEEDS TO BE AT THE TOP, ALWAYS!
+ini_open("Settings.ini");
 global.ambientSound = ini_read_real("sound", "ambient", 50);
 global.effectSound = ini_read_real("sound", "effect", 50);
 global.musicSound = ini_read_real("sound", "music", 50);
