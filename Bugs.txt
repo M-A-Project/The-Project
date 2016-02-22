@@ -3,6 +3,7 @@ Known Bugs
 
 Movement
 --------
+* The game suddenly started to crash for some reason (22.02.2016), need fix, fast.
 * When you jump onto an edge you can get get "stuck" with a 1/4 of the character.
 * Get stuck in walls happends a lot.
 
