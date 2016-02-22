@@ -28,6 +28,7 @@
     <sprites name="Levels">
       <sprite>sprites\spr_level_one</sprite>
       <sprite>sprites\spr_level_two</sprite>
+      <sprite>sprites\spr_level_three</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_player</sprite>
@@ -58,6 +59,7 @@
     <background>background\brg_menu_picture</background>
     <background>background\brg_forest</background>
     <background>background\brg_levels</background>
+    <background>background\brg_snow</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
