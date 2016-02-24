@@ -35,9 +35,29 @@
       <sprite>sprites\spr_player2</sprite>
       <sprite>sprites\spr_player_walk_left</sprite>
       <sprite>sprites\spr_player_walk_right</sprite>
-      <sprite>sprites\spr_player_attack_1</sprite>
+      <sprite>sprites\spr_player_attack_1_walk_right</sprite>
       <sprites name="Data">
         <sprite>sprites\spr_health_bar</sprite>
+      </sprites>
+      <sprites name="Player Top">
+        <sprite>sprites\spr_player_top_idle_right</sprite>
+        <sprite>sprites\spr_player_top_idle_left</sprite>
+        <sprite>sprites\spr_player_top_walk_right</sprite>
+        <sprite>sprites\spr_player_top_walk_left</sprite>
+        <sprite>sprites\spr_player_top_attack_sword_right</sprite>
+        <sprite>sprites\spr_player_top_attack_sword_left</sprite>
+        <sprite>sprites\spr_player_top_jump_right</sprite>
+        <sprite>sprites\spr_player_top_jump_left</sprite>
+      </sprites>
+      <sprites name="Player Bottom">
+        <sprite>sprites\spr_player_bottom_idle_right</sprite>
+        <sprite>sprites\spr_player_bottom_idle_left</sprite>
+        <sprite>sprites\spr_player_bottom_walk_right</sprite>
+        <sprite>sprites\spr_player_bottom_walk_left</sprite>
+        <sprite>sprites\spr_player_bottom_attack_sword_right</sprite>
+        <sprite>sprites\spr_player_bottom_attack_sword_left</sprite>
+        <sprite>sprites\spr_player_bottom_jump_right</sprite>
+        <sprite>sprites\spr_player_bottom_jump_left</sprite>
       </sprites>
     </sprites>
     <sprites name="Boss">
