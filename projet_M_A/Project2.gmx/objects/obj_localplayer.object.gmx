@@ -104,8 +104,13 @@ scr_joystick_support();
             <kind>1</kind>
             <string>/// Attack
 
-if (mouse_check_button(mb_left) &amp;&amp; sprite_index != spr_player_attack_1_walk_right) {
+if (mouse_check_button(mb_left) &amp;&amp; sprite_index != spr_player_attack_1_walk_right &amp;&amp; hspd &gt; 0) {
     sprite_index = spr_player_attack_1_walk_right;
+    image_speed = .3;
+}
+
+if (mouse_check_button(mb_left) &amp;&amp; sprite_index != spr_player_attack_1_walk_left &amp;&amp; hspd &lt; 0) {
+    sprite_index = spr_player_attack_1_walk_left;
     image_speed = .3;
 }
 </string>

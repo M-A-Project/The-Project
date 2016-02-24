@@ -33,10 +33,11 @@
     <sprites name="Player">
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_player2</sprite>
-      <sprite>sprites\spr_player_walk_left</sprite>
       <sprite>sprites\spr_player_walk_right</sprite>
+      <sprite>sprites\spr_player_walk_left</sprite>
       <sprite>sprites\spr_player_ducking</sprite>
       <sprite>sprites\spr_player_attack_1_walk_right</sprite>
+      <sprite>sprites\spr_player_attack_1_walk_left</sprite>
       <sprite>sprites\spr_player_jump_right</sprite>
       <sprite>sprites\spr_player_jump_left</sprite>
       <sprites name="Data">

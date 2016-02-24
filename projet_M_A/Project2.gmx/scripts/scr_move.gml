@@ -23,7 +23,7 @@ kRight = keyboard_check(global.key_right);
 kLeft = -keyboard_check(global.key_left);
 kJump = keyboard_check_pressed(global.key_jump);
 kJumpHeld = keyboard_check(global.key_jump);
-kDuck = keyboard_check(global.key_down);
+//kDuck = keyboard_check(global.key_down);
 
 // Sprite animation + idle
 
