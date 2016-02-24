@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_main_theme</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_hslider</sprite>
     <sprite>sprites\spr_hbar</sprite>
@@ -77,6 +79,11 @@
     <sprites name="Cursor">
       <sprite>sprites\spr_pointer</sprite>
     </sprites>
+    <sprites name="Items">
+      <sprites name="Swords">
+        <sprite>sprites\spr_sword_test</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_cave</background>
@@ -123,6 +130,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_esc_game</object>
+    <object>objects\obj_damage</object>
     <object>objects\obj_title</object>
     <objects name="Buttons">
       <objects name="Keys">
@@ -195,7 +203,6 @@
         <object>objects\obj_boss_2</object>
       </objects>
     </objects>
-    <object>objects\obj_damage</object>
     <objects name="Player">
       <object>objects\obj_localplayer</object>
       <object>objects\obj_remoteplayer</object>
@@ -219,6 +226,11 @@
       <objects name="Login">
         <object>objects\obj_signIn</object>
         <object>objects\obj_userSignInField</object>
+      </objects>
+    </objects>
+    <objects name="Items">
+      <objects name="Swords">
+        <object>objects\obj_sword_test</object>
       </objects>
     </objects>
   </objects>
