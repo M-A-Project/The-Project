@@ -26,16 +26,24 @@ kJumpHeld = keyboard_check(global.key_jump);
 
 // Sprite animation + idle
 
-if (keyboard_check(global.key_right)) {
-    sprite_index = spr_player_walk_right;
+if (hspd < 0) {
+    sprite_index = spr_player_walk_left;
     image_speed = .30;
 } else if (!kRight and !kLeft and !kJumpHeld and !kJump) {
     image_speed = 0;
     image_index = 0;
 }
 
-if (keyboard_check(global.key_left)) {
-    sprite_index = spr_player_walk_left;
+if (hspd > 0) {
+    sprite_index = spr_player_walk_right;
+    image_speed = .30;
+} else if (!kRight and kLeft and !kJumpHeld and !kJump) {
+    image_speed = 0;
+    image_index = 0;
+}
+/*
+if (keyboard_check(global.key_right)) {
+    sprite_index = spr_player_walk_right;
     image_speed = .30;
 } else if (!kRight and !kLeft and !kJumpHeld and !kJump) {
     image_speed = 0;
