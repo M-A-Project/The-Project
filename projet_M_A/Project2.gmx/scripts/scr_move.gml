@@ -46,6 +46,7 @@ if (hspd > 0) {
 if (kJump and kJumpHeld) {
 }
 
+/*
 //-----DUCKING-----
 //-----------------
 if (kDuck) {
@@ -74,6 +75,7 @@ else {
         sprite_index = spr_player_jump_left;
     }
 }
+*/
 
 // React to inputs
 move = kLeft + kRight;
@@ -84,6 +86,7 @@ if (vspd < 10) {
     vspd += grav;
 }
 
+/*
 // See if we are grounded
 
 if (vspd = 0) {
@@ -94,6 +97,7 @@ if (vspd = 0) {
 } else {
     grounded = false;
 }
+*/
 
 
 // ___Jump___
