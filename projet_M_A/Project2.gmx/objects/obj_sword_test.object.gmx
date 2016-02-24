@@ -3,7 +3,7 @@
   <spriteName>spr_sword_test</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-20</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -29,6 +29,7 @@
 str = '';
 dmg = 5;
 player = obj_localplayer;
+sword_test = obj_sword_test;
 </string>
           </argument>
         </arguments>
@@ -55,29 +56,11 @@ player = obj_localplayer;
 
 x = player.x + 5;
 y = player.y;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_sprite(spr_sword_test, 0, x, y);
+
+if (mouse_check_button(mb_left)) {
+    instance_create(x, y, sword_test);
+    draw_sprite(spr_sword_test, 0, x, y);
+}
 </string>
           </argument>
         </arguments>
