@@ -23,6 +23,7 @@ kRight = keyboard_check(global.key_right);
 kLeft = -keyboard_check(global.key_left);
 kJump = keyboard_check_pressed(global.key_jump);
 kJumpHeld = keyboard_check(global.key_jump);
+kDuck = keyboard_check(global.key_down);
 
 // Sprite animation + idle
 
@@ -41,31 +42,59 @@ if (hspd > 0) {
     image_speed = 0;
     image_index = 0;
 }
-/*
-if (keyboard_check(global.key_right)) {
-    sprite_index = spr_player_walk_right;
-    image_speed = .30;
-} else if (!kRight and !kLeft and !kJumpHeld and !kJump) {
-    image_speed = 0;
-    image_index = 0;
-}
 
 if (kJump and kJumpHeld) {
-} 
-  
- // Stop animating (IDLE STATE)
- 
-/*if (!kRight and !kLeft and !kJumpHeld and !kJump) {
-    image_speed = 0;
-    image_index = 0;
 }
-*/
 
+//-----DUCKING-----
+//-----------------
+if (kDuck) {
+    ducking = true;
+} else {
+    ducking = false;
+}
+// Display proper animations while on the ground
+if (grounded) {
+    if (hspd != 0) {
+        // Moving
+    } else if (ducking) {
+        sprite_index = spr_player_ducking;
+    } else {
+        sprite_index = spr_player;
+    }
+}
+// Display proper animations while in the air
+else {
+    if(ducking) {
+    // If we are ducking while in the air
+        sprite_index = spr_player_ducking;
+    } else if (hspd > 0 && vspd != 0) {
+        sprite_index = spr_player_jump_right;
+    } else if (hspd < 0 && vspd != 0) {
+        sprite_index = spr_player_jump_left;
+    }
+}
 
 // React to inputs
 move = kLeft + kRight;
 hspd = move * movespeed;
-if (vspd < 10) vspd += grav;
+
+// Sets gravity to vspd
+if (vspd < 10) {
+    vspd += grav;
+}
+
+// See if we are grounded
+
+if (vspd = 0) {
+    grounded = true;
+    if (ducking) {
+        hspd = 0;
+    }
+} else {
+    grounded = false;
+}
+
 
 // ___Jump___
 // Cave ground
